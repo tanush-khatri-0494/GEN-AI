@@ -1,0 +1,116 @@
+:root {
+    --bg: #f0f8f5;
+    --card-bg: #ffffff;
+    --accent: #2d8f46;
+    --accent-hover: #1c5e30;
+    --text-muted: #6b7280;
+    --shadow: rgba(0,0,0,0.1);
+    --radius: 12px;
+    --font: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    background: var(--bg);
+    color: #0f172a;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+header .lead {
+    margin-top: 8px;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 6px 20px var(--shadow);
+    padding: 30px 25px;
+}
+
+.form-card h2 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    transition: border 0.2s;
+}
+
+input:focus, select:focus {
+    border: 2px solid var(--accent);
+    outline: none;
+}
+
+button.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button.btn:hover {
+    background: var(--accent-hover);
+}
+
+.result-card h2 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.result-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}

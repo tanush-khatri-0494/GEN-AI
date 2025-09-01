@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGuide AI — Eco-Friendly Waste Disposal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>♻ EcoGuide AI</h1>
+    <p class="lead">Get real-time, eco-friendly disposal instructions for everyday items.</p>
+  </header>
+
+  <main class="container">
+    <section class="card form-card">
+      <h2>Generate Your Guide</h2>
+      <form id="guide-form" autocomplete="off">
+        <div class="form-group">
+          <label for="item">Item Name</label>
+          <input type="text" id="item" placeholder="e.g., used battery, plastic bottle" required>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="general">General</option>
+            <option value="recyclable_plastic">Plastic</option>
+            <option value="mixed_paper">Paper/Cardboard</option>
+            <option value="food_waste">Food/Organic</option>
+            <option value="electronics">Electronics/Batteries</option>
+            <option value="hazardous">Hazardous</option>
+            <option value="textiles">Textiles</option>
+            <option value="glass">Glass</option>
+            <option value="metal">Metal</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="context">Context (Optional)</label>
+          <input type="text" id="context" placeholder="e.g., small apartment, no curbside recycling">
+        </div>
+
+        <button class="btn" type="submit">Generate Guide</button>
+      </form>
+    </section>
+
+    <section class="card result-card" id="result" style="display:none;">
+      <h2 id="result-title"></h2>
+      <p id="result-text"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made for college project — AI-generated eco-friendly waste disposal guide.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
